@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "StatusId": {
+      "type": "integer",
+      "required": false
+    },
+    "successDate": {
+      "type": "string",
+      "required": true
+    },
+    "shopName": {
+      "type": "string"
+    },
+    "shopId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "itemName": {
+      "type": "string"
+    },
+    "subId": {
+      "type": "string",
+      "required": false
+    },
+    "commission": {
+      "type": "biginteger"
+    },
+    "orderPrice": {
+      "type": "biginteger"
+    },
+    "orderDate": {
+      "type": "string"
+    },
+    "import_log": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::import-log.import-log",
+      "inversedBy": "orders"
+    }
+  }
+}

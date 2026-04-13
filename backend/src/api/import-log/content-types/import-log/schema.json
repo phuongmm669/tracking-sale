@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "import_logs",
+  "info": {
+    "singularName": "import-log",
+    "pluralName": "import-logs",
+    "displayName": "ImportLog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "importDate": {
+      "type": "datetime"
+    },
+    "fileName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "import_log"
+    }
+  }
+}
