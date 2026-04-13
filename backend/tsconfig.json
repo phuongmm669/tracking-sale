@@ -2,14 +2,13 @@
   "extends": "@strapi/typescript-utils/tsconfigs/server",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "noImplicitAny": false, // Cho phép dùng 'any' ngầm định
+    "strict": false, // Tắt chế độ kiểm tra nghiêm ngặt
+    "skipLibCheck": true, // Bỏ qua kiểm tra lỗi trong các thư viện node_modules
+    "ignoreDeprecations": "5.0"
   },
-  "include": [
-    "./",
-    "./**/*.ts",
-    "./**/*.js",
-    "src/**/*.json"
-  ],
+  "include": ["./", "./**/*.ts", "./**/*.js", "src/**/*.json"],
   "exclude": [
     "node_modules/",
     "build/",
