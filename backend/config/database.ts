@@ -17,9 +17,7 @@ export default ({ env }) => {
         database: env("DATABASE_NAME", "strapi"),
         user: env("DATABASE_USERNAME", "strapi"),
         password: env("DATABASE_PASSWORD", "strapi"),
-        ssl: isCloud
-          ? { rejectUnauthorized: false }
-          : env.bool("DATABASE_SSL", false),
+        ssl: client === "postgres" ? { rejectUnauthorized: false } : false,
         schema: env("DATABASE_SCHEMA", "public"),
       },
       pool: {

@@ -42,10 +42,10 @@
       "required": false
     },
     "commission": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "orderPrice": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "orderDate": {
       "type": "string"
